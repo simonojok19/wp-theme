@@ -1,6 +1,4 @@
-<?php
-get_header();
-?>
+<?php get_header(); ?>
 
 <div class="home">
 	<div class="home-hero-section">
@@ -26,21 +24,21 @@ get_header();
 		<h2>Featured Instructors</h2>
 		<div class="featured-instructors-width-wrapper">
 			<div class="featured-instructor featured-instructor-pink">
-				<img src="images/john-smith-featured-headshot.png" alt="">
+				<img src="<?php bloginfo('template_url');  ?>/images/john-smith-featured-headshot.png" alt="">
 				<h3>John Smith</h3>
 				<p>John has over ten years of industry experience and specializes in watercolors and oil pastels.
 				</p>
 				<button class="button"><a href="">Read More</a></button>
 			</div>
 			<div class="featured-instructor featured-instructor-teal">
-				<img src="images/leslie-yepp-featured-headshot.png" alt="">
+				<img src="<?php bloginfo('template_url');  ?>/images/leslie-yepp-featured-headshot.png" alt="">
 				<h3>Leslie Yepp</h3>
 				<p>Leslie has studied in Paris, China, and Brazil, bringing a wide variety of cultural influences and styles to her classes. She teaches everything from basic drawing to sculpture.
 				</p>
 				<button class="button"><a href="">Read More</a></button>
 			</div>
 			<div class="featured-instructor featured-instructor-purple">
-				<img src="images/lisa-frank-featured-headshot.png" alt="">
+				<img src="<?php bloginfo('template_url');  ?>/images/lisa-frank-featured-headshot.png" alt="">
 				<h3>Lisa Frank</h3>
 				<p>Lisa comes to us as a visiting artist and instructor. She specializes in brightly colored animal illustration.
 				</p>
@@ -50,6 +48,4 @@ get_header();
 	</div>
 </div>
 
-<?php
-get_footer();
-?>
+<?php get_footer(); ?>
