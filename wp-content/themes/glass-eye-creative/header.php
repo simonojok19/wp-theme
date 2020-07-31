@@ -3,8 +3,6 @@
 
 <head>
 	<meta charset="UTF-8">
-	<link href="<?php bloginfo('template_url'); ?>/style.css" type="text/css" rel=stylesheet>
-	<link href="https://fonts.googleapis.com/css?family=Raleway:300,400,400i,700" rel="stylesheet">
 </head>
 
 <body>

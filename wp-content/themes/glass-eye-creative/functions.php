@@ -8,7 +8,7 @@ if (!function_exists('glasseye-setup')) {
 add_action('after_setup_theme', 'glasseye_setup');
 
 function register_glasseye_menu() {
-	register_nav_menu( array('primary' => __('Primary Menu'), 'footer' => __('footer Menu')));
+	register_nav_menus( array('primary' => __('Primary Menu'), 'footer' => __('footer Menu')));
 }
 
 add_action('init', 'register_glasseye_menu');
