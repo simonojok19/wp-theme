@@ -31,17 +31,32 @@ if (!defined('ABSPATH')) {
 
 class SimonPlugin {
 	public function __construct() {
+		add_action('init', array($this, 'custom_post_type'));
 	}
 
-	function method1() {
+	function activate() {
+		echo  "The plugin was activated";
+	}
+
+	function deactivate() {
+		echo "The plugin was deactivated";
+	}
+
+	function uninstall() {
 
 	}
 
-	function method2() {
-
+	function custom_post_type() {
+		register_post_type('book', ['public' => 'true']);
 	}
 }
 if ( class_exists('SimonPlugin')) {
 	$simonOjokPlugin = new SimonPlugin();
 }
 
+
+// activation
+register_activation_hook(__FILE__, array($simonOjokPlugin, 'activate'));
+register_deactivation_hook(__FILE__, array($simonOjokPlugin, 'deactivate'));
+// deactivation
+// uninstall
