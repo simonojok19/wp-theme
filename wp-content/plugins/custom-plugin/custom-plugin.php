@@ -18,6 +18,8 @@
  * even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
  */
 
-if (! defined('ABSPATH')) {
+if (!defined('ABSPATH')) {
 	die;
 }
+
+//defined('ABSPATH') or die('Hey this is not a website');
