@@ -32,5 +32,6 @@ if (!defined('ABSPATH')) {
 class SimonPlugin {
 	// all methods
 }
-
-$simonOjokPlugin = new SimonPlugin();
+if ( class_exists('SimonPlugin')) {
+	$simonOjokPlugin = new SimonPlugin();
+}
