@@ -23,3 +23,8 @@ if (!defined('ABSPATH')) {
 }
 
 //defined('ABSPATH') or die('Hey this is not a website');
+
+//if (!function_exists('add_action')) {
+//	die('No Wordpress found');
+//	exit('Something wrong');
+//}
