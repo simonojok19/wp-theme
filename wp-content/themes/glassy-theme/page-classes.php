@@ -16,7 +16,7 @@ get_header();
 		<div class="class-container-content">
 			<div class="class-instructor-section">
 				<h3>Instructor</h3>
-				<img src="images/leslie-yepp-headshot-thumb.jpg" class="instructor-headshot" alt="">
+				<img src="<?php echo bloginfo('template_uri') ?>/images/leslie-yepp-headshot-thumb.jpg" class="instructor-headshot" alt="">
 				<p class="instructor-name">Leslie Yepp</p>
 			</div>
 			<div class="class-skill-section">
@@ -36,7 +36,7 @@ get_header();
 		<div class="class-container-content">
 			<div class="class-instructor-section">
 				<h3>Instructor</h3>
-				<img src="images/leslie-yepp-headshot-thumb.jpg" class="instructor-headshot" alt="">
+				<img src="<?php echo bloginfo('template_uri') ?>/images/leslie-yepp-headshot-thumb.jpg" class="instructor-headshot" alt="">
 				<p class="instructor-name">Leslie Yepp</p>
 			</div>
 			<div class="class-skill-section">
@@ -56,7 +56,7 @@ get_header();
 		<div class="class-container-content">
 			<div class="class-instructor-section">
 				<h3>Instructor</h3>
-				<img src="images/leslie-yepp-headshot-thumb.jpg" class="instructor-headshot" alt="">
+				<img src="<?php echo bloginfo('template_uri') ?>/images/leslie-yepp-headshot-thumb.jpg" class="instructor-headshot" alt="">
 				<p class="instructor-name">Leslie Yepp</p>
 			</div>
 			<div class="class-skill-section">
@@ -76,7 +76,7 @@ get_header();
 		<div class="class-container-content">
 			<div class="class-instructor-section">
 				<h3>Instructor</h3>
-				<img src="images/leslie-yepp-headshot-thumb.jpg" class="instructor-headshot" alt="">
+				<img src="<?php echo bloginfo('template_uri') ?>/images/leslie-yepp-headshot-thumb.jpg" class="instructor-headshot" alt="">
 				<p class="instructor-name">Leslie Yepp</p>
 			</div>
 			<div class="class-skill-section">
