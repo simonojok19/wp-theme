@@ -28,3 +28,9 @@ if (!defined('ABSPATH')) {
 //	die('No Wordpress found');
 //	exit('Something wrong');
 //}
+
+class SimonPlugin {
+	// all methods
+}
+
+$simonOjokPlugin = new SimonPlugin();
