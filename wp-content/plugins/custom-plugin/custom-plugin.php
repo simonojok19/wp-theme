@@ -45,6 +45,3 @@ if ( class_exists('SimonPlugin')) {
 	$simonOjokPlugin = new SimonPlugin();
 }
 
-function customFunction($args) {
-	echo $args;
-}
