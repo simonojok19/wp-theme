@@ -29,3 +29,19 @@ function glass_theme_scripts() {
 }
 
 add_action('wp_enqueue_scripts', 'glass_theme_scripts');
+
+/** Register widget area **/
+
+function glass_theme_widget_init() {
+	register_sidebar(array(
+		'name' => __('Main Sidebar', 'glassy'),
+		'id' => 'main-sidebar',
+		'description' => __('Widgets added here will appear in all templates using', 'glassy'),
+		'before_widget' => '<section id="%1$s" class="widget %2$s">',
+		'after-widget' => '</section>',
+		'before-title' => '<h2 class="widget-title">',
+		'after-title' => '</h2>'
+	));
+}
+
+add_action('widgets_init', 'glass_theme_widget_init');
