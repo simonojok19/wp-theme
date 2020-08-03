@@ -249,7 +249,7 @@ h5
     color: #a5a5a5;
 }
 
-h1 {
+h1, .page-title {
     font-weight: 600;
     font-size: 2.75em;
     line-height: 1.0909090909090908em;
@@ -332,6 +332,14 @@ code {
 /**
  * Global Styles
 */
+.clearfix:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+}
 
 .main-content-width-wrapper {
     max-width: 1200px;
@@ -383,17 +391,21 @@ a:active {
 
 .header {
     background-color: #fff;
-    padding: 2em;
+    padding: 1em;
+    overflow: auto;
 }
 
 .logo {
     width: 200px;
+    display: block;
+    float: left;
     margin-left: 2em;
+    margin-top: 1em;
 }
 
 .main-navigation {
     float: right;
-    margin-top: 1em;
+    margin-top: 2em;
 }
 
 .main-navigation li {
@@ -416,25 +428,29 @@ a:active {
     color: #00b8b8;
 }
 
+#menu-icon {
+    display: none;
+}
+
 /**
  * Footer Styles
 */
 
 .footer {
+    margin-top: 1em;
     padding: 1em 0 3em 0;
     background: #e0e5db;
     clear: both;
 }
 
 .footer-navigation {
-    max-width: 58.2% ;
-    margin: 0 auto;
+    max-width: 700px ;
+    margin: 1em auto;
 }
 
 .footer-navigation li {
     list-style-type: none;
     float: left;
-    margin-right: 1.5em;
 }
 
 .footer-navigation a {
@@ -459,7 +475,7 @@ a:active {
 }
 
 /**
-*  Sidebar
+ * Sidebar Styles
 */
 
 .sidebar {
@@ -467,21 +483,10 @@ a:active {
     float: right;
     width: 30%;
     padding: 1em;
-    color: #fff;
 }
 
-.sidebar .sidebar-heading, .sidebar .sidebar-heading {
+.sidebar .widget-title, .sidebar .widget_text {
     color: #fff;
-}
-
-/**
-*  Two Column Template Right Sidebar
-*/
-
-.two-column-template-wrapper {
-    float: left;
-    width: 55%;
-    margin-right: 1em;
 }
 
 /**
@@ -503,22 +508,18 @@ a:active {
     background: rgba(228, 189, 11, 0.25);
     float: right;
     width: 35%;
+    min-width: 450px;
     padding: 0 3em;
     margin-top: 4em;
-}
-
-.hero-content h1 {
-    color: #fff;
     text-align: right;
+    color: #fff;
 }
 
 .hero-content p {
-    color: #fff;
     font-size: 1.375em;
     font-weight: 300;
     line-height: 1.5;
     margin-top: 1.0909090909090908em;
-    text-align: right;
 }
 
 .button-home {
@@ -545,12 +546,14 @@ a:active {
     background: #ff006f;
 }
 
+
 .home-philosophy-section,
 .home-location-section {
+    box-sizing: border-box;
     font-size: 1.2em;
     line-height: 1.8;
     color: #fff;
-    width: 44%;
+    width: 49%;
     margin-top: 1em;
     margin-bottom: 1em;
     padding: 1.5em;
@@ -559,10 +562,8 @@ a:active {
 }
 
 .home-philosophy-section {
-
     background: url(images/home-philosophy-section-bg.jpg) no-repeat;
     background-size: cover;
-    margin-right: 1em;
     float: left;
 }
 
@@ -598,12 +599,13 @@ a:active {
     color: #fff;
     text-align: center;
     line-height: 1.9em;
-    width: 27%;
+    width: 30%;
     float: left;
     margin: 0 1em 1em 1em;
     padding: 1em;
     max-width: 350px;
     box-shadow: none;
+    box-sizing: border-box;
     transition: .5s all;
 }
 
@@ -652,22 +654,17 @@ a:active {
 *  Classes Template
 */
 
-.classes {
-    /*background-color: #00b8b8;*/
-}
-
 .classes-wrapper {
     background-image: url(images/classes-template-bg.png);
     background-repeat: no-repeat;
-    /*background-color: #00b8b8;*/
     background-size: cover;
     padding: 2em;
     min-height: 600px;
 }
 
-/*.classes h1, */ .class-container h2 {
-                      color: #fff;
-                  }
+.class-container h2 {
+    color: #fff;
+}
 
 .classes-entry p {
     color: #fff;
@@ -719,7 +716,9 @@ a:active {
 .instructor-headshot {
     display: block;
     margin: .5em auto;
+    max-width: 120px;
 }
+
 
 .class-skill-level
 .skill-level {
@@ -778,5 +777,210 @@ a:active {
     color: #5da87b;
 }
 
+/**
+* Two Column Template
+*/
+
+.two-column-entry {
+    float: left;
+    width: 55%;
+    margin-right: 1em;
+}
+
+/**
+* Responsive Styles
+*/
+
+@media screen and (max-width:1122px) {
+    /* Header */
+
+    .logo {
+        width: 150px;
+        margin-left: 0;
+    }
+
+    .main-navigation {
+        padding-left: 0;
+        font-size: 0.9em;
+    }
+
+    /* Home Page */
+
+    .hero-content {
+        background: rgba(228,189,11,0.8);
+    }
+    .home-philosophy-section, .home-location-section {
+        height: 500px;
+    }
+
+    .featured-instructor {
+        width: 29%;
+    }
+
+    .featured-instructor img {
+        width: 225px;
+    }
+
+}
+
+@media screen and (max-width: 900px) {
+    /* Header */
+    .logo {
+        margin-left: 0;
+        width: 125px;
+    }
+
+    /* Home Page */
+    .featured-instructor {
+        margin-right: .5em;
+    }
+    .featured-instructor img {
+        width: 175px;
+    }
+
+}
+
+@media screen and (max-width: 875px) {
+    /* Main Navigation */
+
+    #menu-icon {
+        display: inline-block;
+        position: absolute;
+        right: 30px;
+        padding: .5em 1em;
+        text-decoration: none;
+        color: #00b8b8;
+        border-radius: 5px;
+        width: 40px;
+        height 40px;
+        border: 3px solid #808080;
+    }
+
+    .mobile-menu {
+        width: 100px;
+        height: 50px;
+        position: absolute;
+        right: 31px;
+        border-radius: 5px;
+        transition: .5s all;
+    }
+
+    .mobile-menu:hover .menu-main-navigation-container {
+        cursor: pointer;
+        height: 42px;
+    }
+
+    .main-navigation , .main-navigation:active {
+        display: none;
+        position: absolute;
+        padding: 20px;
+        background: #fff;
+        border: 5px solid #444;
+        right: 0px;
+        top: 15px;
+        width: 250px;
+        border-radius: 4px 0 4px 4px;
+    }
+
+    .main-navigation {
+        padding: 0;
+    }
+
+    .main-navigation li {
+        text-align: center;
+        width: 100%;
+        padding: 10px 0;
+        margin: 0;
+    }
+
+    .main-navigation li:hover {
+        background-color: #ededed;
+    }
+
+    .mobile-menu:hover .main-navigation {
+        display: block;
+    }
+
+    /* Home Page */
+
+    .hero-content {
+        margin-top: 2em;
+    }
+
+}
 
 
+@media screen and (max-width: 745px) {
+
+    /* Header */
+
+    .logo {
+        margin-top: 0;
+    }
+
+    /* Home Page */
+    .featured-instructor img {
+        width: 150px;
+    }
+}
+
+@media screen and (max-width: 675px) {
+    /* Home Page */
+
+    .hero-content {
+        box-sizing: border-box;
+        text-align: center;
+        margin-top: 0;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 3em;
+        float: none;
+    }
+
+    .button-home {
+        float: none;
+        margin: 1em auto;
+    }
+
+    .home-philosophy-section, .home-location-section {
+        float: none;
+        width: 100%;
+        height: auto;
+    }
+
+    .featured-instructor {
+        float: none;
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .footer-navigation {
+        padding: 0;
+    }
+
+    .footer-navigation li {
+        width: 100%;
+        float: none;
+        margin-top: 1em;
+        text-align: center;
+    }
+
+    .copyright {
+        width: 100%;
+        text-align: center;
+        margin-left: 0;
+    }
+
+}
+
+
+@media screen and (max-width: 430px) {
+    .hero-content {
+        min-width: 300px;
+    }
+
+    .header {
+        min-width: 300px;
+    }
+}
