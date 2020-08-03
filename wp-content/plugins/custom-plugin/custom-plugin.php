@@ -35,7 +35,7 @@ class SimonPlugin {
 	}
 
 	function activate() {
-		echo  "The plugin was activated";
+		flush_rewrite_rules();
 	}
 
 	function deactivate() {
@@ -47,7 +47,7 @@ class SimonPlugin {
 	}
 
 	function custom_post_type() {
-		register_post_type('book', ['public' => 'true']);
+		register_post_type('book', ['public' => 'true', 'label' => 'Books']);
 	}
 }
 if ( class_exists('SimonPlugin')) {
