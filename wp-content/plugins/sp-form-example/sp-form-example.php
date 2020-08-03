@@ -5,7 +5,7 @@ Plugin URI: http://example.com
 Description: Simple non-bloated WordPress Contact Form
 Version: 1.0
 Author: Simon Peter Ojok
-Author URI: http://w3guy.com
+Author URI: http://simonojok19.me
 */
 
 function html_form_code() {
