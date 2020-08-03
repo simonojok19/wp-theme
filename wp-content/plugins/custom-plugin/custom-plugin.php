@@ -30,7 +30,16 @@ if (!defined('ABSPATH')) {
 //}
 
 class SimonPlugin {
-	// all methods
+	public function __construct() {
+	}
+
+	function method1() {
+
+	}
+
+	function method2() {
+
+	}
 }
 if ( class_exists('SimonPlugin')) {
 	$simonOjokPlugin = new SimonPlugin();
