@@ -17,7 +17,10 @@ get_header();
                         the_post_thumbnail();
                     }
                     the_category();
+                    the_tags();
+                    the_author_posts();
                     the_comment();
+                    edit_post_link();
                 }
             }
         ?>
