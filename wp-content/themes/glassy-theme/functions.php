@@ -45,3 +45,7 @@ function glass_theme_widget_init() {
 }
 
 add_action('widgets_init', 'glass_theme_widget_init');
+
+function glass_theme_card() {
+
+}
