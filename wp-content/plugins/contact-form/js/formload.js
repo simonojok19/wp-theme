@@ -5,7 +5,7 @@ jQuery(document).ready(function () {
         message = document.querySelector("#message").value;
         email = document.querySelector('#email').value;
         if (Email) {
-            $(document ).ready(function() {
+            jQuery(document ).ready(function() {
                 Email.send({
                     Host : "smtp.yourisp.com",
                     Username : "username",
@@ -15,7 +15,10 @@ jQuery(document).ready(function () {
                     Subject : "This is the subject",
                     Body : message
                 }
-                    ).then( message => alert(message));});
+                    ).then( message => alert(message))
+                    .catch((error => {
+                        alert(error);
+                    }));});
         }
     })
 })
