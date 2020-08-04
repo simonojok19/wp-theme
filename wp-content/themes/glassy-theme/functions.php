@@ -46,6 +46,9 @@ function glass_theme_widget_init() {
 
 add_action('widgets_init', 'glass_theme_widget_init');
 
+add_action('wp_ajax_my_user_vote', "my_user_vote");
+add_action('wp_ajax_nopriv_my_user_vote', 'my_must_login');
+
 function my_user_vote() {
 	if (!wp_verify_nonce($_REQUEST['nonce'], "my_user_vote_nonce")) {
 		exit("No naughty business please");
