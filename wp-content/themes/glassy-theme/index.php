@@ -1,5 +1,5 @@
 <?php
-/*
+/*Template Name: Index
  * Main template file
  */
 get_header();

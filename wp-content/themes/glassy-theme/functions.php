@@ -83,3 +83,15 @@ add_action('wp_ajax_sendemail', 'sendemail');
 function sendemail() {
 	echo '<script> console.log("recieved")</script>';
 }
+
+function load_instructor_card() {
+	echo "<div class=\"featured-instructor featured-instructor-pink\">
+				<img src=\"<?php bloginfo('template_url');?>/images/john-smith-featured-headshot.png\" alt=\"\">
+				<h3>John Smith</h3>
+				<p>John has over ten years of industry experience and specializes in watercolors and oil pastels.
+				</p>
+				<button class=\"button\"><a href=\"\">Read More</a></button>
+			</div>";
+}
+
+add_shortcode('load_instructor_card', 'load_instructor_card');

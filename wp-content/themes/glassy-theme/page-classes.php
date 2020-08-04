@@ -11,6 +11,10 @@ get_header();
 		<p>Below you can find upcoming classes at Glass Eye. Classes are listed 3 months in advance and are limited to 15 students per class. We believe in smaller class sizes so that instructors have more one-on-one time to spend with students. Space fills up quickly so snag your spot today!</p>
 	</div>
 
+    <?php if (have_posts()): while (have_posts()): the_post(); ?>
+    <p><?php the_content(); ?></p>
+    <?php endwhile; endif; ?>
+
 	<div class="class-container class-container-pink">
 		<h2>Acrylics for Beginners</h2>
 		<div class="class-container-content">
