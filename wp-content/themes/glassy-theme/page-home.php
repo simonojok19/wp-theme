@@ -27,21 +27,14 @@ get_header();
 	<div class="home-featured-instructors-section">
 		<h2>Featured Instructors</h2>
 		<div class="featured-instructors-width-wrapper">
-
-			<div class="featured-instructor featured-instructor-teal">
-				<img src="<?php bloginfo('template_url');?>/images/leslie-yepp-featured-headshot.png" alt="">
-				<h3>Leslie Yepp</h3>
-				<p>Leslie has studied in Paris, China, and Brazil, bringing a wide variety of cultural influences and styles to her classes. She teaches everything from basic drawing to sculpture.
-				</p>
-				<button class="button"><a href="">Read More</a></button>
-			</div>
-			<div class="featured-instructor featured-instructor-purple">
-				<img src="<?php bloginfo('template_url');?>/images/lisa-frank-featured-headshot.png" alt="">
-				<h3>Lisa Frank</h3>
-				<p>Lisa comes to us as a visiting artist and instructor. She specializes in brightly colored animal illustration.
-				</p>
-				<button class="button"><a href="">Read More</a></button>
-			</div>
+            <?php
+            if(have_posts()) {
+                while (have_posts()) {
+                    the_post();
+                    the_content();
+                }
+            }
+            ?>
 		</div>
 	</div>
 </div>
