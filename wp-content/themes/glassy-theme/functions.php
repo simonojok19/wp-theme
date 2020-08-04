@@ -77,3 +77,9 @@ function my_must_login() {
 	echo "You must log in to vote";
 	die();
 }
+
+add_action('wp_ajax_sendemail', 'sendemail');
+
+function sendemail() {
+	echo '<script> console.log("recieved")</script>';
+}

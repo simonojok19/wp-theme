@@ -13,33 +13,6 @@ function registration_form() {
 	$email ='';
 	$message = '';
 	echo '
-		<script>
-			window.addEventListener("load", () => {
-			    var email = document.querySelector("#email");
-				var message = document.querySelector("#message");
-				var submit = document.querySelector("#send");
-				var adminemail = document.querySelector("#hidden");
-				submit.addEventListener("click", (event) => {
-				    event.preventDefault();
-				    email_txt = email.value;
-				    message_text = message.value;
-				    addmin_email = adminemail.value;
-				    if (Email) {
-				        Email.send({
-						    Host : "smtp.zoho.com",
-						    Username : "accounts@techbuzzhub.org",
-						    Password : "First@001",
-						    To : email_txt,
-						    From : addmin_email,
-						    Subject : "Message From The Website",
-						    Body : message_text
-						    }).then(
-						      message => alert(message)
-						 );
-				    }
-				})
-			}, false)
-		</script>
 		<style>
 			form {
 				display: flex;
@@ -96,3 +69,4 @@ function my_script_enqueuer() {
 	wp_enqueue_script('jquery');
 	wp_enqueue_script('my_voter_script');
 }
+add_action('init', 'my_script_enqueuer');
