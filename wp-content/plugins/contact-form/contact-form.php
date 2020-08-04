@@ -89,3 +89,10 @@ function loadJavaScripts() {
 }
 add_action('wp_enqueue_scripts', 'loadJavaScripts');
 add_shortcode('cr_custom_registration', 'registration_form');
+
+function my_script_enqueuer() {
+	wp_register_script("my_voter_script", WP_PLUGIN_URL.'/contact-form/js/formload.js');
+	wp_localize_script('my_voter_script', 'myAjax', array('ajaxurl' => admin_url('admin-ajax.php')));
+	wp_enqueue_script('jquery');
+	wp_enqueue_script('my_voter_script');
+}
